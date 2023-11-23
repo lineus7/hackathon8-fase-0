@@ -120,11 +120,11 @@ ion-icon {
   }
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   body {
     font-size: 50px;
   }
-}
+} */
 
 /* style swiper js */
 /* html,
@@ -184,9 +184,25 @@ body {
   color: white;
   font-family: "Gilda Display", serif;
 }
+.unique{
+    font-size: 80px;
+}
 
+/* konten produk */
+/* .images {
+    max-width: 20%;
+    max-height: 20%;
+    object-fit: cover;
+    object-position: center;
+  } */
 
 /* ini konten produk  */
-
+.products-container{
+    margin-top: 50px;
+    text-align: center;
+}
+.products-container h1{
+    font-size: 60px;
+}
 
 
