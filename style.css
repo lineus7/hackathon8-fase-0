@@ -201,7 +201,14 @@ body {
   margin-bottom: 50px;
 }
 .products-container h1 {
-  font-size: 60px;
+  font-size: 70px;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  font-style: italic;
+}
+.products-container h1 span {
+    color: #ff6c22;
+    font-size: 63px;
 }
 /* .list-products {
     display: flex;
