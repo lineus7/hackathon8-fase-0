@@ -206,6 +206,23 @@ clear.addEventListener(`click`, ()=> {
 })
 //END CART BUTTON
 
+//BUY BUTTON
+let buy = document.querySelector(`.submit`)
+
+buy.addEventListener(`click`,()=> {
+    if (total === 0) {
+        alert(`Tidak ada barang dikeranjang. Silahkan masukan barang terlebih dahulu.`)
+    } else {
+        alert(`Pembelian sebesar ${rupiah(total)} telah berhasil.`)
+        total = 0
+        cartTotal.textContent = `${rupiah(total)}`    
+        let cartItems = document.querySelectorAll(`.cart-item`)
+        cartItems.forEach((li) => {
+            li.remove()
+        })
+    }
+})
+
 
 
 
