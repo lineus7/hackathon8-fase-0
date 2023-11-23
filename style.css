@@ -525,7 +525,7 @@ ini search button */
 .cart-container {
   position: fixed;
   top: 0;
-  left: calc(100%);
+  left: calc(100% - 560px);
   width: 500px;
   background-color: #453e3b;
   height: 100vh;
@@ -568,6 +568,7 @@ ini search button */
   padding: 1em;
   justify-content: space-between;
   align-items: center;
+  margin: 1em;
 }
 
 .item-text {
@@ -595,6 +596,15 @@ ini search button */
   margin-right: -2rem;
   background-color: #ffd814;
 }
+
+.delete-item {
+  width: 40px;
+}
+
+.none {
+  left: 100%;
+}
+
 
 /* LOGIN */
 
@@ -647,4 +657,4 @@ ini search button */
 
 .register-link {
   margin-top: 1em;
-}
+  
