@@ -149,6 +149,23 @@ ion-icon {
   animation: marquee 12s linear infinite;
 }
 
+
+.track2-opposite {
+    position: absolute;
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee-opposite 12s linear infinite;
+}
+
+@keyframes marquee-opposite {
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
 @keyframes marquee {
   from {
     transform: translateX(0);
@@ -545,12 +562,17 @@ ini search button */
 
 .cart-header {
   display: flex;
+  font-size: large;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
   justify-content: space-between;
   align-items: center;
 }
 
 .cart-img {
   width: 50px;
+  object-fit: cover;
   height: 50px;
   border-radius: 5%;
 }
@@ -561,9 +583,14 @@ ini search button */
   flex: 1;
 }
 
+.cart-text{
+    letter-spacing: 0.1rem;
+}
+
 .cart-item {
   background-color: white;
   display: flex;
+  opacity: 1;
   border-radius: 5px;
   padding: 1em;
   justify-content: space-between;
@@ -573,6 +600,8 @@ ini search button */
 
 .item-text {
   color: black;
+  font-size: 15px;
+  letter-spacing: 0.05rem;
 }
 
 .cart-footer {
@@ -585,16 +614,30 @@ ini search button */
   flex: 1;
   height: 50px;
   border: 0px;
+  font-size: 15px;
+  letter-spacing: 0.05rem;
+  font-weight: 600;
+  /* text-transform: uppercase; */
+
 }
+
 
 .submit {
   margin-left: -2rem;
   background-color: #ff6c22;
 }
-
+.submit:hover{
+    background-color: rgb(12, 174, 12);
+    color: white;
+}
 .clear {
   margin-right: -2rem;
   background-color: #ffd814;
+  transition: background-color 0.3s ;
+}
+.clear:hover{
+    background-color: rgb(215, 8, 8);
+    color: white;
 }
 
 .delete-item {
@@ -610,7 +653,7 @@ ini search button */
 
 .signup-container {
   position: fixed;
-  top: 0;
+  /* top: 0; */
   left: calc(100% - 560px);
   width: 500px;
   background-color: #453e3b;
@@ -619,35 +662,47 @@ ini search button */
   display: flex;
   gap: 10%;
   z-index: 99;
-  opacity: 90%;
+  opacity: 95%;
   flex-direction: column;
   padding: 1.3em;
 }
 .signup-container {
   font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
   text-align: center;
 }
+.signup-container > * {
+    margin-bottom: 10%;
+  }
 .input-box input {
   width: 300px;
-  height: 30px;
+  height: 40px;
   border: none;
+  padding-inline: 10px;
+  border-radius: 10px;
   outline: none;
   margin: 10px;
 }
 .logintext {
   text-align: center;
+  /* margin-top: 50px; */
   color: white;
+  border-radius: 10px;
 }
 
 .register_link {
   font-size: 15px;
   color: white;
+  margin-top: 30px;
 }
 .btn {
   background-color: orangered;
   color: white;
   width: 200px;
   height: 30px;
+  text-transform: uppercase;
+  border-radius: 10px;
   border: 0;
 }
 .close-login {
@@ -658,3 +713,4 @@ ini search button */
 .register-link {
   margin-top: 1em;
   
+}
