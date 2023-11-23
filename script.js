@@ -324,5 +324,24 @@ loginSign.addEventListener(`click`, ()=> {
     loginContainer.classList.remove(`none`)
 })
 
+//filter search
+let searchInput = document.querySelector('#search-input');
+let listProducts = document.querySelectorAll(".product-container");
+
+searchInput.addEventListener('input', filterProducts);
+
+function filterProducts() {
+  let searchValue = searchInput.value.toLowerCase();
+
+  listProducts.forEach((product) => {
+    let productName = product.querySelector(".product-name").textContent.toLowerCase();
+
+    if (productName.includes(searchValue)) {
+      product.classList.remove(`display-none`)
+    } else {
+      product.classList.add(`display-none`)
+    }
+  });
+}
 
 
