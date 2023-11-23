@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="script.js" defer ></script>
+    <!-- Demo styles -->
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper-container {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        position: relative;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- <section class="container"> -->
+    <nav class="navbar">
+      <!-- <p>Foxthrift</p> -->
+      <img src="./foto/logo.png" alt="" />
+      <div class="greeting display-none">  <div>
+        Selamat datang Mas Jarwo 😘
+      </div> 
+          <a href="index.html">Sign out</a>
+    </div>
+    <div class="login-btn">login</div>
+      <!-- <div> <a href=""> Su</a> </div> -->
+      <ion-icon style="width: 2.5rem; height: auto" name="cart-outline">
+      </ion-icon>
+    </nav>
+    <!-- </section> -->
+    <!-- Swiper -->
+    <div class="swiper-container mySwiper">
+      <div class="swiper-wrapper">
+        <!-- <p>zdarova</p> -->
+        <div class="swiper-slide">
+          <img src="./foto/foto3.jpg" alt="" />
+          <div class="text">
+            Not Your Ordinary <br />
+            Thrift Store
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <img src="./foto/foto2.jpg" alt="" />
+          <div class="text">
+            Your wallet's <br> best friend.
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="./foto/hero.png" alt="" />
+          <div class="text unique">
+            <h3>DISCOUNTS</h3>
+            <h3>20%</h3>
+            <p>EVERY MONDAY!</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="marquee">
+      <div class="track">
+        <div class="content">
+          &nbsp;New Arrival get <span> 50% Discounts </span> for Hacktiv8
+          students only *** New Arrival get <span> 50% Discounts </span>for
+          Hacktive8 student only *** New Arrival get
+          <span> 50% Discounts </span>for Hacktive8 student only ***
+        </div>
+      </div>
+    </div>
+    <!-- <div class="marquee margin-m">
+        <div class="track">
+          <div class="content">
+            &nbsp;New Arrival get <span> 50% Discounts </span> for Hacktiv8
+            students only *** New Arrival get <span> 50% Discounts </span>for
+            Hacktive8 student only *** New Arrival get
+            <span> 50% Discounts </span>for Hacktive8 student only ***
+          </div>
+        </div>
+      </div> -->
+
+    <!-- konten produk -->
+
+    <section class="products-container">
+      <h1>Products <span>
+        List
+      </span> </h1>
+
+      <div class="input-container">
+        <input type="text" name="text" id="search-input" class="input" placeholder="search...">
+        <span class="icon"> 
+          <svg width="19px" height="19px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path opacity="1" d="M14 5H20" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path opacity="1" d="M14 8H17" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M21 11.5C21 16.75 16.75 21 11.5 21C6.25 21 2 16.75 2 11.5C2 6.25 6.25 2 11.5 2" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path> <path opacity="1" d="M22 22L20 20" stroke="#000" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+        </span>
+      </div>
+      <div class="products-grid">
+
+        <!-- <div class="product-container">
+            <div class="product-image-container">
+            <img class="product-image"
+                src="./foto/men-golf-polo-t-shirt-blue.jpg">
+            </div>
+    
+            <div class="product-name limit-text-to-2-lines">
+           Men golf
+            </div>
+    
+            <div class="product-rating-container">
+            <img class="product-rating-stars"
+                src="./foto/rating-45.png">
+            <div class="product-rating-count link-primary">
+                200
+            </div>
+            </div>
+    
+            <div class="product-price">
+            Rp.1000000
+            </div>
+    
+            <div class="product-quantity-container">
+            <select class="js-quantity-selector-${product.id}">
+                <option selected value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            </div>
+    
+            <div class="product-spacer"></div>
+    
+            <div class="added-to-cart js-added-to-cart-${product.id}">
+            <img src="images/icons/checkmark.png">
+            Added
+            </div>
+    
+            <button class="add-to-cart-button button-primary js-add-to-cart" data-product-id='${
+              product.id
+            }'>
+            Add to Cart
+            </button>
+        </div> -->
+        <!-- <a class="button-home" href="#">
+            HOME
+        </a> -->
+        <!-- <button class="button-home">HOME</button> -->
+     
+
+        </div>
+        <div class="marquee ">
+          <div class="track2-opposite">
+            <div class="content">
+              &nbsp;New Arrival get <span> 50% Discounts </span> for Hacktiv8
+              students only  New Arrival get <span> 50% Discounts </span>for
+              Hacktive8 student only  New Arrival get
+              <span> 50% Discounts </span>for Hacktive8 student only ***
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CART  -->
+
+    <div class="cart-container none">
+
+        <div class="cart-header">
+            <p class="cart-text">My Cart</p>
+            <p class="close">X</p>
+        </div>
+        <div class="cart-list">
+          
+          <!-- <div class="cart-item">
+            <img src="sample.jpeg" alt="" class="cart-img">
+            <p class="item-text">Z Flip Foldable Mobile</p>
+            <p class="harga item-text ">Rp 20.000.000</p>
+          </div> -->
+        
+        </div>
+        <div class="calc-list">
+          <p class="cart-text">Total Harga</p>
+          <p class="cart-total cart-text">Rp 0,00</p>
+        </div>
+        <div class="cart-footer">
+          <button class="submit">Buy</button>
+          <button class="clear">Clear</button>
+        </div>
+      </div>
+
+      <!-- LOGIN -->
+      <div class="signup-container none">
+        <p class="close-login">X</p>
+        <div class="action-box">
+            <form action="">
+                <h3 class="logintext">Login</h3>
+                <div class="input-box"> 
+                    <input type="text" placeholder="Username" class="login-user" required>
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Password" class="login-pass" required>
+                </div>
+                <button type="button" class="btn">Login</button>
+                <div class="register_link">
+                    <p>Don't have an account? <a href="#" style="color: orangered;" class="signup-btn">Sign up</a></p>
+                </div>
+            </form>
+        </div>
+
+        <!-- SIGN UP -->
+
+        <div class="signup-pass-container none">
+          <p class="close-signup">X</p>
+          <div class="action-signup-box">
+              <form action="">
+                  <h3 class="signup-text">Sign Up</h3>
+                  <div class="input-signup-box"> 
+                      <input type="text" placeholder="Username" class="username" required>
+                  </div>
+                  <div class="input-signup-box">
+                      <input type="password" placeholder="Password" class="password" required>
+                  </div>
+                  <div class="input-signup-box">
+                      <input type="password" placeholder="Re-enter password" class="password2" required>
+                  </div>
+                  <button type="button" class="btn-signup">Submit</button>
+                 
+              </form>
+          </div>
+
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>
