@@ -198,9 +198,17 @@ body {
 .products-container {
   margin-top: 50px;
   text-align: center;
+  margin-bottom: 50px;
 }
 .products-container h1 {
-  font-size: 60px;
+  font-size: 70px;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  font-style: italic;
+}
+.products-container h1 span {
+    color: #ff6c22;
+    font-size: 63px;
 }
 /* .list-products {
     display: flex;
@@ -299,7 +307,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  /* border-radius: 20px; */
   height: 180px;
   margin-bottom: 20px;
 }
@@ -308,14 +316,17 @@ body {
   /* Images will overflow their container by default. To
       prevent this, we set max-width and max-height to 100%
       so they stay inside their container. */
-  max-width: 100%;
-  max-height: 100%;
+  width: 150px;
+  border-radius: 20px;
+  object-position: cover;
+  height: 200px;
 }
 
 .product-name {
   height: 40px;
   margin-bottom: 5px;
   font-size: 22px;
+
   /* letter-spacing: 0.05rem ; */
   /* font-weight: 600; */
   /* font-family: "Gilda Display", serif; */
