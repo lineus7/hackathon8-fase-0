@@ -68,12 +68,12 @@
     <nav class="navbar">
       <!-- <p>Foxthrift</p> -->
       <img src="./foto/logo.png" alt="" />
-      <div class="greeting">  <div>
+      <div class="greeting display-none">  <div>
         Selamat datang Mas Jarwo 😘
       </div> 
-          <a href="">Sign out</a>
+          <a href="index.html">Sign out</a>
     </div>
-    <div class="login-btn" > <a href="">login</a> </div>
+    <div class="login-btn">login</div>
       <!-- <div> <a href=""> Su</a> </div> -->
       <ion-icon style="width: 2.5rem; height: auto" name="cart-outline">
       </ion-icon>
@@ -140,7 +140,7 @@
       </span> </h1>
 
       <div class="input-container">
-        <input type="text" name="text" class="input" placeholder="search...">
+        <input type="text" name="text" id="search-input" class="input" placeholder="search...">
         <span class="icon"> 
           <svg width="19px" height="19px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path opacity="1" d="M14 5H20" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path opacity="1" d="M14 8H17" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M21 11.5C21 16.75 16.75 21 11.5 21C6.25 21 2 16.75 2 11.5C2 6.25 6.25 2 11.5 2" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path> <path opacity="1" d="M22 22L20 20" stroke="#000" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
         </span>
@@ -201,8 +201,18 @@
             HOME
         </a> -->
         <!-- <button class="button-home">HOME</button> -->
-        
+     
 
+        </div>
+        <div class="marquee ">
+          <div class="track2-opposite">
+            <div class="content">
+              &nbsp;New Arrival get <span> 50% Discounts </span> for Hacktiv8
+              students only  New Arrival get <span> 50% Discounts </span>for
+              Hacktive8 student only  New Arrival get
+              <span> 50% Discounts </span>for Hacktive8 student only ***
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -234,23 +244,44 @@
       </div>
 
       <!-- LOGIN -->
-      <div class="signup-container">
+      <div class="signup-container none">
         <p class="close-login">X</p>
         <div class="action-box">
             <form action="">
                 <h3 class="logintext">Login</h3>
                 <div class="input-box"> 
-                    <input type="text" placeholder="Username" required>
+                    <input type="text" placeholder="Username" class="login-user" required>
                 </div>
                 <div class="input-box">
-                    <input type="password" placeholder="Password" required>
+                    <input type="password" placeholder="Password" class="login-pass" required>
                 </div>
-                <button type="submit" class="btn">Login</button>
+                <button type="button" class="btn">Login</button>
                 <div class="register_link">
-                    <p>Don't have an account? <a href="#" style="color: orangered;">Sign up</a></p>
+                    <p>Don't have an account? <a href="#" style="color: orangered;" class="signup-btn">Sign up</a></p>
                 </div>
             </form>
         </div>
+
+        <!-- SIGN UP -->
+
+        <div class="signup-pass-container none">
+          <p class="close-signup">X</p>
+          <div class="action-signup-box">
+              <form action="">
+                  <h3 class="signup-text">Sign Up</h3>
+                  <div class="input-signup-box"> 
+                      <input type="text" placeholder="Username" class="username" required>
+                  </div>
+                  <div class="input-signup-box">
+                      <input type="password" placeholder="Password" class="password" required>
+                  </div>
+                  <div class="input-signup-box">
+                      <input type="password" placeholder="Re-enter password" class="password2" required>
+                  </div>
+                  <button type="button" class="btn-signup">Submit</button>
+                 
+              </form>
+          </div>
 
 
     <!-- Swiper JS -->

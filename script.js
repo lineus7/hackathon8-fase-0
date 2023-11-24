@@ -223,6 +223,125 @@ buy.addEventListener(`click`,()=> {
     }
 })
 
+//SIGNUP
+let signupContainer =document.querySelector(`.signup-pass-container`)
 
+
+let btnSignup = document.querySelector(`.btn-signup`);
+
+btnSignup.addEventListener(`click`, () => {
+    let username = document.querySelector(`.username`);
+    let password = document.querySelector(`.password`);
+    let password2 = document.querySelector(`.password2`);
+
+    if (password[`value`] === password2[`value`] && password[`value`]) {
+        alert(`Pendaftaran Berhasil. Silahkan Login Kembali`)
+        let stringUser = localStorage.getItem(`user`)
+        let stringPass = localStorage.getItem(`pass`)
+
+        if (stringUser) {
+            stringUser += `;${username[`value`]}`
+            stringPass += `;${password[`value`]}`
+        } else {
+            stringUser = username[`value`]
+            stringPass = password[`value`]
+        }
+
+        localStorage.setItem(`user`,stringUser)
+        localStorage.setItem(`pass`,stringPass)
+
+        signupContainer.classList.add(`none`)
+
+
+    } else {
+        alert(`Password yang anda masukan tidak sesuai. Silahkan masukan kembali pasword anda`)
+    }
+})
+
+//LOGIN
+
+let loginButton = document.querySelector(`.btn`)
+
+loginButton.addEventListener(`click`, ()=> {
+    let user = document.querySelector(`.login-user`)
+    let pass = document.querySelector(`.login-pass`)
+    
+    let stringofUser = localStorage.getItem(`user`)
+    let stringofPass = localStorage.getItem(`pass`)
+    let userArr = stringofUser.split(`;`)
+    let passArr = stringofPass.split(`;`)
+
+    console.log(passArr,userArr)
+
+    let flag = true
+    for (let i=0; i<userArr.length; i++) {
+        if (user[`value`] === userArr[i] &&
+        pass[`value`] === passArr[i]) {
+            let welcome = document.querySelector(`.greeting`)
+            let loginContainer = document.querySelector(`.signup-container`)
+
+            flag = false
+
+            welcome.classList.remove(`display-none`)
+            loginContainer.classList.add(`none`)
+            document.querySelector(`.login-btn`).classList.add(`display-none`)
+        }
+    }
+
+    if(flag) alert(`Username dan Password tidak sesuai atau belum terdaftar`)
+});
+
+
+//SIGNUP CLOSE
+// X Button Signup
+let closeSignup = document.querySelector(`.close-signup`)  
+
+closeSignup.addEventListener('click', ()=> {
+    signupContainer.classList.add('none')
+})
+
+// X Button LOGIN
+let closeLogin = document.querySelector(`.close-login`)
+let loginContainer =document.querySelector(`.signup-container`)  
+
+closeLogin.addEventListener('click', ()=> {
+    loginContainer.classList.add('none')
+})
+
+// OPEN SIGNUP
+
+let signupOpen = document.querySelector(`.signup-btn`)
+signupOpen.addEventListener (`click`, ()=> {
+    let loginContainer = document.querySelector(`.signup-container`)
+    signupContainer.classList.remove(`none`)
+
+    loginContainer.classList.add(`none`)
+})
+
+let loginSign = document.querySelector(`.login-btn`)
+
+loginSign.addEventListener(`click`, ()=> {
+    loginContainer.classList.remove(`none`)
+})
+
+//filter search
+let searchInput = document.querySelector('#search-input');
+let listProducts = document.querySelectorAll(".product-container");
+
+searchInput.addEventListener('input', filterProducts);
+
+function filterProducts() {
+  let searchValue = searchInput.value.toLowerCase();
+
+  listProducts.forEach((product) => {
+    let productName = product.querySelector(".product-name").textContent.toLowerCase();
+
+    if (productName.includes(searchValue)) {
+      product.classList.remove(`display-none`)
+    } else {
+      product.classList.add(`display-none`)
+    }
+  });
+}
 
 

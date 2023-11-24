@@ -49,7 +49,6 @@ ion-icon {
 .greeting {
   display: flex;
   margin: auto;
-  display: none;
   margin-right: 100px;
   gap: 20px;
   /* font-style: italic; */
@@ -58,6 +57,7 @@ ion-icon {
   font-size: 20px;
   padding-right: 20px;
 }
+
 .login-btn {
   display: flex;
   margin: auto;
@@ -147,6 +147,21 @@ ion-icon {
   white-space: nowrap;
   will-change: transform;
   animation: marquee 12s linear infinite;
+}
+.track2-opposite {
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee-opposite 12s linear infinite;
+}
+
+@keyframes marquee-opposite {
+  from {
+      transform: translateX(-50%);
+  }
+  to {
+      transform: translateX(0%);
+  }
 }
 
 @keyframes marquee {
@@ -448,7 +463,8 @@ ini search button */
 
 .product-rating-stars {
   width: 100px;
-  margin-right: 6px;
+  margin: auto;
+  /* margin-right: 6px; */
   height: auto;
   /* width: 120px; */
 }
@@ -539,20 +555,20 @@ ini search button */
   gap: 1rem;
 }
 
-.none {
-  left: 100%;
-}
-
 .cart-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 0.1rem;
 }
 
 .cart-img {
   width: 50px;
   height: 50px;
   border-radius: 5%;
+  object-fit: cover;
 }
 
 .calc-list {
@@ -560,7 +576,11 @@ ini search button */
   justify-content: space-between;
   flex: 1;
 }
-
+.cart-text{
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.06rem;
+}
 .cart-item {
   background-color: white;
   display: flex;
@@ -573,11 +593,14 @@ ini search button */
 
 .item-text {
   color: black;
+  font-size: 15px;
+  letter-spacing: 0.05rem;
 }
 
 .cart-footer {
   display: flex;
   margin-bottom: 15px;
+  letter-spacing: 0.05rem;
 }
 
 .submit,
@@ -585,16 +608,30 @@ ini search button */
   flex: 1;
   height: 50px;
   border: 0px;
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  letter-spacing: 0.06rem;
+  /* border: 1px solid white; */
 }
 
 .submit {
   margin-left: -2rem;
-  background-color: #ff6c22;
+  background-color: white;
+  color: black;
+  /* background-color: #ff6c22; */
 }
-
+.submit:hover{
+  background-color: #ff6c22;
+  color: white;
+}
 .clear {
   margin-right: -2rem;
-  background-color: #ffd814;
+  /* background-color: #ffd814; */
+}
+.clear:hover{
+  background-color: #940606;
+
 }
 
 .delete-item {
@@ -611,7 +648,7 @@ ini search button */
 .signup-container {
   position: fixed;
   top: 0;
-  left: calc(100% - 560px);
+  left: calc(100% - 550px);
   width: 500px;
   background-color: #453e3b;
   height: 100vh;
@@ -625,29 +662,37 @@ ini search button */
 }
 .signup-container {
   font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
   text-align: center;
 }
 .input-box input {
   width: 300px;
-  height: 30px;
+  height: 45px;
   border: none;
+  padding-inline: 10px;
+  border-radius: 10px;
   outline: none;
   margin: 10px;
 }
 .logintext {
   text-align: center;
   color: white;
+  border-radius: 10px;
 }
 
 .register_link {
   font-size: 15px;
   color: white;
+  margin-top: 30px;
 }
 .btn {
   background-color: orangered;
   color: white;
   width: 200px;
   height: 30px;
+  text-transform: uppercase;
+  border-radius: 10px;
   border: 0;
 }
 .close-login {
@@ -657,4 +702,66 @@ ini search button */
 
 .register-link {
   margin-top: 1em;
-  
+}
+
+/* SIGN UP */
+
+.signup-pass-container {
+  position: fixed;
+  top: 0;
+  left: calc(100% - 550px);
+  width: 500px;
+  background-color: #453E3B;
+  height: 100vh;
+  transition: 0.5s;
+  display: flex;
+  gap: 10%;
+  flex-direction: column;
+  padding: 1.3em;  
+}
+
+.signup-pass-container {
+  font-size: 30px;
+  text-align: center;
+}
+.input-signup-box input {
+  width: 300px;
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+  outline: none; 
+  margin: 10px; 
+  padding: 1em; 
+}
+.signup-text {
+  text-align: center;
+  color: white;
+}
+.btn-signup {
+background-color: orangered;
+color: white;
+width: 200px;
+height: 40px;
+margin-top: 20px;
+font-size: 16px;
+border: none;
+border-radius: 10px;
+}
+.close-signup {
+  text-align: right;
+  color: white;
+}
+
+
+
+
+
+/* PALING BAWAH */
+.display-none {
+  display: none;
+}
+.none {
+  left: 100%;
+}
+
+
