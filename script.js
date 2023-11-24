@@ -288,6 +288,7 @@ loginButton.addEventListener(`click`, ()=> {
             welcome.classList.remove(`display-none`)
             loginContainer.classList.add(`none`)
             document.querySelector(`.login-btn`).classList.add(`display-none`)
+            document.querySelector(`.welcome-user`).textContent = user[`value`]
         }
     }
 
