@@ -765,3 +765,227 @@ border-radius: 10px;
 }
 
 
+.column-3 button {
+  /* padding: 20px 20px ; */
+  border: none;
+  color: white;
+  background-color: black;
+  height: 45px;
+  width: 150px;
+  font-size: 17px;
+  /* font-family: ; */
+  font-weight: 200;
+  border-radius: 2px;
+  font-family: "Manrope", sans-serif;
+  cursor: pointer;
+}
+
+.button-footer {
+
+  background-color: white;
+  color: black;
+  height: 70px;
+  width: 200px;
+  border: none;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  font-family: "Manrope", sans-serif;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+}
+.bebas{
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.button-footer:hover {
+  background-color: black;
+  color: white;
+  transition: background-color 0.4s, color 0.4s, scale 0.8s;
+  scale: 110%;
+  /* border-color: black; */
+  border-style: solid;
+}
+/* .third-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+  } */
+.column-3 button:hover {
+  background-color: white;
+  color: black;
+  transition: background-color 0.4s, color 0.4s, scale 0.8s;
+  scale: 110%;
+  border-color: black;
+  border-style: solid;
+}
+
+.text-content {
+  font-size: 48px;
+  letter-spacing: 0.05rem;
+  font-weight: 300;
+}
+.section-desc4 p,
+.smaller {
+  font-weight: 300;
+  font-size: large;
+  letter-spacing: 0;
+}
+.column-faq {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.section-desc4 h3 {
+  font-size: 55px;
+  font-weight: 300;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  /* font-family: "Manrope", sans-serif; */
+  /* letter-spacing: 0.03rem; */
+  /* font-style: italic; */
+  text-transform: uppercase;
+  /* margin-top: 70px; */
+  background-color: black;
+  color: white;
+  /* max-width: 1300px; */
+}
+
+.last-content {
+  display: flex;
+  margin-block: 70px;
+  /* justify-content: space-between; */
+  /* flex-direction: column; */
+  font-size: 40px;
+  gap: 6em;
+  /* letter-spacing: 0.02em; */
+  font-weight: 300;
+}
+.column-last {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.social-media {
+  display: flex;
+  margin-top: 30px;
+  padding-top: 100px;
+  justify-content: end;
+  /* flex-direction: ; */
+}
+.social-media p {
+  margin-top: 20px;
+
+}
+.social-media a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer-end {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+/* //back button to home */
+.button-end {
+    width: 230px;
+    height: 70px;
+    overflow: hidden;
+    border: none;
+    text-transform: uppercase;
+    color: #fff;
+    background: none;
+    letter-spacing: 0.03rem;
+    position: relative;
+    padding-bottom: 2em;
+  }
+  
+  .button-end > div,button > svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+  
+  .button-end:before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    background: currentColor;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .button-end:hover:before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  .button-end .clone > *,button .text > * {
+    opacity: 1;
+    font-size: 1.6rem;
+    transition: 0.2s;
+    margin-left: 4px;
+  }
+  
+  .button-end .clone > * {
+    transform: translateY(60px);
+  }
+  
+  .button-end:hover .clone > * {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+  }
+  
+  .button-end:hover .text > * {
+    opacity: 1;
+    transform: translateY(-60px);
+    transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+  }
+  
+  .button-end:hover .clone > :nth-child(1) {
+    transition-delay: 0.15s;
+  }
+  
+  .button-end:hover .clone > :nth-child(2) {
+    transition-delay: 0.2s;
+  }
+  
+  .button-end:hover .clone > :nth-child(3) {
+    transition-delay: 0.25s;
+  }
+  
+  .button-end:hover .clone > :nth-child(4) {
+    transition-delay: 0.3s;
+  }
+  /* icon style and hover */
+  .button-end svg {
+    width: 20px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(-50deg);
+    transition: 0.2s ease-out;
+  }
+  
+  .button-end:hover svg {
+    transform: translateY(-50%) rotate(-90deg);
+  }
