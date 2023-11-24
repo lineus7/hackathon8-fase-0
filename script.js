@@ -268,6 +268,9 @@ loginButton.addEventListener(`click`, ()=> {
     
     let stringofUser = localStorage.getItem(`user`)
     let stringofPass = localStorage.getItem(`pass`)
+
+    if(!stringofUser) alert(`Username dan Password tidak sesuai atau belum terdaftar`)
+    
     let userArr = stringofUser.split(`;`)
     let passArr = stringofPass.split(`;`)
 
