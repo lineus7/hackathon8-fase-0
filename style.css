@@ -576,6 +576,11 @@ ini search button */
   justify-content: space-between;
   flex: 1;
 }
+
+.cart-list {
+  overflow: scroll;
+}
+
 .cart-text{
   font-size: 17px;
   font-weight: 600;
